@@ -21,7 +21,7 @@
           style="height: 250px;"
         >
           <v-card
-            v-for="n in 4"
+            v-for="n in cardData"
             :key="n"
             class="highlight margin-lr-20"
             outlined
@@ -33,7 +33,7 @@
             <v-list-item three-line>
               <v-list-item-content>
                 <div class="d-flex align-center">
-                  Title
+                  {{ n.cardTitle }}
                   <v-avatar size="20">
                     <v-icon size="15">mdi-help-circle</v-icon>
                   </v-avatar>
@@ -52,11 +52,11 @@
             <v-divider></v-divider>
 
             <v-card-actions>
-              <span> Label </span>
+              <span class="caption"> {{ n.footerLabel }} </span>
 
               <v-spacer></v-spacer>
 
-              <span> Value </span>
+              <span class="caption"> {{ n.footerValue }} </span>
             </v-card-actions>
           </v-card>
         </v-row>
@@ -66,53 +66,19 @@
 </template>
 
 <script>
+import cardData from '../store/cardData.json';
+
 export default {
   name: 'HelloWorld',
 
-  data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
-  }),
+  data() {
+    return {
+      cardData,
+    };
+  },
+  mounted() {
+    // insert api here and consume response in data()
+  },
 };
 </script>
 

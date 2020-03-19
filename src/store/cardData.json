@@ -1,0 +1,19 @@
+[
+  {
+    "cardTitle": "Sales",
+    "footerLabel": "Average Order Value",
+    "footerValue": "P1,000"
+  },
+  {
+    "cardTitle": "Engagement",
+    "footerLabel": "20% decrease in 30 days"
+  },
+  {
+    "cardTitle": "Acquisition",
+    "footerLabel": "20% increase in 30 days"
+  },
+  {
+    "cardTitle": "Rewards Program",
+    "footerLabel": "20% increase in 30 days"
+  }
+]
