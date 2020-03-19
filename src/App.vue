@@ -7,36 +7,58 @@
     >
       <div class="d-flex align-center">
         <v-btn
-          href="https://github.com/vuetifyjs/vuetify/releases/latest"
-          target="_blank"
           text
         >
           <v-icon>mdi-menu</v-icon>
         </v-btn>
-
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
       </div>
 
       <v-spacer></v-spacer>
+        <div style="position: fixed; top: 25%; left: 50%;">
+          Kollab
+        </div>
+      <v-spacer></v-spacer>
+
+        <v-avatar size="40">
+          <v-icon>mdi-account-circle</v-icon>
+        </v-avatar>
+        <v-select
+          label="Kiko"
+          style="max-width: 100px;"
+        ></v-select>
+
+      <v-divider
+        class="mx-4"
+        inset
+        vertical
+      ></v-divider>
+
+      <v-badge
+        bordered
+        top
+        color="orange accent-4"
+        dot
+        offset-x="10"
+        offset-y="10"
+      >
+        <v-icon>
+          mdi-bell
+        </v-icon>
+      </v-badge>
+
+      <v-divider
+        class="mx-4"
+        inset
+        vertical
+      ></v-divider>
+
+      <v-icon>
+        mdi-comment-question-outline
+      </v-icon>
     </v-app-bar>
 
     <v-content>
+      <Headers/>
       <HelloWorld/>
     </v-content>
   </v-app>
@@ -44,12 +66,14 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+import Headers from './components/Headers.vue';
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    Headers,
   },
 
   data: () => ({
