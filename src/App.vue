@@ -19,8 +19,8 @@
         </div>
       <v-spacer></v-spacer>
 
-        <v-avatar size="40">
-          <v-icon>mdi-account-circle</v-icon>
+        <v-avatar size="50">
+          <v-icon size="40">mdi-account-circle</v-icon>
         </v-avatar>
         <v-select
           label="Kiko"
@@ -57,23 +57,42 @@
       </v-icon>
     </v-app-bar>
 
-    <v-content>
+    <v-content class="grey lighten-5">
       <Headers/>
-      <HelloWorld/>
+      <!-- <HelloWorld/> -->
+      <Charts/>
+
+      <div>
+        <v-row style="margin: 3%;" class="d-flex justify-space-around">
+          <v-card>
+            <BranchTable/>
+          </v-card>
+
+          <v-card>
+            <RewardsTable/>
+          </v-card>
+        </v-row>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 import Headers from './components/Headers.vue';
+import Charts from './components/Charts.vue';
+import BranchTable from './components/BranchTable.vue';
+import RewardsTable from './components/RewardsTable.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    // HelloWorld,
     Headers,
+    Charts,
+    BranchTable,
+    RewardsTable,
   },
 
   data: () => ({
